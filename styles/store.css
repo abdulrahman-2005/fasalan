@@ -1,0 +1,143 @@
+@font-face {
+	font-family: kufi;
+	src: url("./kufi.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: kufi;
+}
+
+body {
+    background: url("../assets/images/project_images/green-rich.jpg");
+    overflow-x: hidden;
+}
+
+.container {
+    position: absolute;
+    overflow-y: scroll;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+}
+
+.tagtag {
+    user-select: none;
+    position: relative;
+    background-color: black;
+    border: 5px solid black;
+    height: 400px;
+    width: 300px;
+    margin: 20px;
+    box-shadow: 0 0 10px 3px black;
+}
+
+.tagtag .settings {
+    font-family: monospace;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    background-color: yellow;
+    height: 30px;
+    width: 30px;
+    font-weight: bold;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.tagtag .open {
+    width: 100%;
+    margin: 0;
+    height: 30%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: black;
+    color: yellow;
+    display: block;
+    text-align: center;
+    cursor: default;
+}
+
+.tagtag .open button {
+    height: 30%;
+    width: 100%;
+    background-color: yellow;
+    font-size: 20px;
+    border: none;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.tagtag .open .price {
+    position: relative;
+    font-size: 20px;
+    top: 0;
+}
+
+.tagtag .image {
+    background-color: red;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 60%;
+}
+
+.tagtag .image .tag-image {
+    top: 0;
+    background: url('../assets/images/project_images/green-rich.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.tagtag .image .blur {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.911);
+}
+
+.tagtag .descreption {
+    height: 40%;
+}
+
+.tagtag .descreption p {
+    width: 100%;
+    font-size: 140%;
+    height: 40px;
+    direction: rtl;
+    color: yellow;
+}
+
+.tagtag .descreption .title {
+    color: red;
+}
+
+.tagtag .descreption #descreption {
+    position: relative;
+    font-size: 140%;
+    font-weight: bold;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    outline: none;
+    resize: none;
+    border: none;
+    width: 90%;
+    height: calc(100% - 80px);
+    padding-right: 5%;
+    padding-left: 5%;
+    background-color: #fff;
+    color: black;
+}

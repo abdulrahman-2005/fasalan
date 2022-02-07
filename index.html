@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فصلان شوب</title>
+    <link rel="stylesheet" href="styles/index.css" />
+    <script src="./js/login.js"></script>
+</head>
+
+<body>
+    <div class="header">***هذا الموقع مازال نسخة تجريبية***</div>
+    <div id="container">
+        <button class="box" id="b1" onclick="goTo('../pages/users.html')">
+            لائحة الاعضاء
+        </button>
+        <button class="box" id="b2" onclick="goTo('../pages/profile.html')">
+            الملف الشخصي
+        </button>
+        <button class="box" id="b3" onclick="goTo('../pages/store.html')">
+            متجر التغفيلات
+        </button>
+        <button class="box" id="b4" onclick="goTo('../pages/free.html')">
+            تغفيلات مجانية
+        </button>
+        <button class="box" id="b5" onclick="goLogin()">
+            تسجيل الدخول
+        </button>
+        <button class="box" id="b6" onclick="logout()">
+            تسجيل الخروج
+        </button>
+    </div>
+    <div id="navContainer">
+        <a href="" id="nav"></a>
+    </div>
+    <script src="./js/index.js"></script>
+    <script>
+        check();
+    </script>
+</body>
+
+</html>

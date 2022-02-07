@@ -1,0 +1,114 @@
+@font-face {
+	font-family: kufi;
+	src: url("./kufi.ttf");
+}
+
+* {
+    direction: rtl;
+    padding: 0;
+    margin: 0;
+    font-family: kufi;
+}
+
+/*START>>> website*/
+
+body {
+    background: url("../assets/images/project_images/red-rich.jpg");
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: yellow;
+    font-size: 4vw;
+}
+
+/*END>>>>> website*/
+#container {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    height: calc(100% - 100px);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.61);
+}
+
+
+.box {
+    height: 30%;
+    width: 40%;
+    margin: .5%;
+    margin-left: 2%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vw;
+    border-radius: 10px;
+    transition: .5s;
+    font-weight: bold;
+    color: white;
+    box-shadow: 5px 5px 0px 0 white;
+    background-color: black;
+
+}
+
+.box:hover {
+    color: yellow;
+    box-shadow: 5px 5px 0px 0 yellow;
+
+}
+
+
+#instant {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.623);
+    color: black;
+}
+
+#instant button {
+    height: 20vw;
+    width: 80vw;
+    font-size: 3vw;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#instant a {
+    color: white;
+    text-decoration: none;
+    box-shadow: none;
+}
+
+
+
+/* START>>> user showing box*/
+
+/* END>>> user showing box*/

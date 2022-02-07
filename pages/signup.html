@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="../styles/card.css" />
+		<link rel="stylesheet" href="../styles/signup.css" />
+        <script src="../js/jsbincopy.js"></script>
+		<style>
+			button:hover {
+				box-shadow: 0 0 0 0 transparent !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="signupContainer">
+			<div class="area">
+                <h1> انشاء حساب @ فصلان</h1>
+                <h1>عالم... من التغفيلات</h1>
+                <div class="triangle"></div>
+                <div class="triangle"></div>
+				<input
+					name="username"
+					type="text"
+					id="name"
+					placeholder="اسمك بالكامل 'بالعربي'"
+				/>
+				<div class="levelChoose">
+					<button
+						style="box-shadow: 0 0 3px 3px red"
+						class="red"
+						onclick="chooseLevel('دحيح')"
+					>
+						دحيح
+					</button>
+					<button
+						style="box-shadow: 5px 0 3px 3px purple"
+						class="purple"
+						onclick="chooseLevel('****')"
+					>
+						****
+					</button>
+					<button
+						style="box-shadow: 5px 0 3px 3px orange"
+						class="orange"
+						onclick="chooseLevel('صايع')"
+					>
+						صايع
+					</button>
+					<button
+						style="box-shadow: 5px 0 3px 3px yellow"
+						class="yellow"
+						onclick="chooseLevel('هه')"
+					>
+						هه
+					</button>
+					<button
+						style="box-shadow: 5px 0 3px 3px green"
+						class="green"
+						onclick="chooseLevel('نرم')"
+					>
+						نرم
+					</button>
+				</div>
+				<p
+					style="
+						width: 80%;
+						direction: rtl;
+						height: 8%;
+						font-size: x-large;
+						margin-top: 2vw;
+						margin-bottom: 0;
+						color: white;
+					"
+				>
+					الايميل اللي هيتعمل
+				</p>
+				<div style="margin-top: 0" id="generate">
+					
+                </div>
+
+				<div id="cardContainer"></div>
+                <input type="password" id="password" placeholder="انشئ رقم سري">
+				<button id="signup" onclick="signup()">تسجيل</button>
+			</div>
+		</div>
+		<script src="../js/generator.js"></script>
+		<script>
+			let userCardContainer = document.getElementById("cardContainer");
+			let nameInput = document.getElementById("name");
+			let generate = document.getElementById("generate");
+			let lvlchoose;
+            let pasword = document.getElementById("password")
+
+			let createdUser = {
+				id: "newUser",
+				level: "المستوى",
+				name: "الاسم",
+				usrnm: createUsername(nameInput.value),
+				password: "newUser",
+				tagsCount: "__",
+				soldTags: "__",
+				boughtTags: "__",
+			};
+			renderUsers(
+				"cardContainer",
+				[createdUser],
+				"../assets/images/project_images/empty-image.png"
+			);
+			function chooseLevel(lvl) {
+				lvlchoose = lvl;
+				userCardContainer.innerHTML = "";
+				createdUser["level"] = lvlchoose;
+				renderUsers(
+					"cardContainer",
+					[createdUser],
+					"../assets/images/project_images/empty-image.png"
+				);
+			}
+			function changeUserName() {
+				createdUser["name"] = nameInput.value;
+				createdUser["usrnm"] = createUsername(nameInput.value);
+				userCardContainer.innerHTML = "";
+				let choosenColor = renderUsers(
+                    "cardContainer",
+					[createdUser],
+					"../assets/images/project_images/empty-image.png",
+                    );
+                generate.innerHTML = `<button onclick="changeUserName()">مش عاجبني</button><span>${createdUser["usrnm"]}</span>@fasalan.ga`;
+			}
+			nameInput.addEventListener("input", () => {
+				changeUserName();
+			});
+            password.addEventListener("input", () => {
+                createdUser["password"] = password.value
+            })
+            function signup() {
+                let message = `أيها المستخدم اليك التالي، فيه مجموعة بيانات اتنسخت عمدك دلوقتي، هتروح تبعتهم في مجموعة الواتس"6464684133100000000000000" مع صورتك بدون اي تعديلات، وسيتم تفعيل ملفك بعد عدة ايام`
+                alert(message)
+                let u = createdUser
+                navigator.clipboard.writeText(encryptitinsomereallybadway(`${u["id"]}.${u["level"]}.${u["name"]}.${u["usrnm"]}.${u["password"]}.${u["tagsCount"]}.${u["soldTags"]}.${u["boughtTags"]}`))
+            }
+		</script>
+	</body>
+</html>

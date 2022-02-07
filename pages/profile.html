@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title id="title-space"></title>
+		<link rel="stylesheet" href="../styles/profile.css">
+        <script src="../js/login.js"></script>
+	</head>
+	<body>
+		<div id="container">
+				<p class="title">المستوى </p><p class="info" id="level"></p>
+				<p class="title">الاسم </p><p class="info" id="name"></p>
+				<p class="title">اسم المستخدم </p><p class="info" id="usrnm"></p>
+				<p class="title">اسم الحساب </p><p class="info" id="FMail"></p>
+				<p class="title">الرقم السري </p><p class="info" id="password"></p>
+				<p class="title">التغفيلات المرفوعة </p><p class="info" id="tagsCount"></p>
+				<p class="title">تغفيلات بيعت </p><p class="info" id="soldTags"></p>
+				<p class="title">تغفيلات اشترت </p><p class="info" id="boughtTags" style="margin-bottom: 100px"></p>
+			</div>
+		<script>
+			if (isLogged()) {
+				let logData = localStorage.getItem("CurrentUser").split(",");
+				let levelEl = document.getElementById("level");
+				let nameEl = document.getElementById("name");
+				let usrnmEl = document.getElementById("usrnm");
+				let FMailEl = document.getElementById("FMail");
+				let passwordEl = document.getElementById("password");
+				let tagsCountEl = document.getElementById("tagsCount");
+				let soldTagsEl = document.getElementById("soldTags");
+				let boughtTagsEl = document.getElementById("boughtTags");
+				let titleEl = document.getElementById("title-space");
+				levelEl.innerText = logData[2];
+				titleEl.innerText = `الملف الشخصي | ${logData[3]}`
+				nameEl.innerText = logData[3];
+				usrnmEl.innerText = logData[4];
+				FMailEl.innerText = logData[5];
+				passwordEl.innerText = logData[6];
+				tagsCountEl.innerText = logData[7];
+				soldTagsEl.innerText = logData[8];
+				boughtTagsEl.innerText = logData[9];
+			}
+		</script>
+	</body>
+</html>

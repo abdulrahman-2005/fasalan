@@ -1,0 +1,144 @@
+
+.user {
+    direction: ltr;
+    border-radius: 1vw;
+    padding: .5%;
+	display: flex;
+    margin-top: 1%;
+	flex-wrap: wrap;
+	height: 12vw;
+	width: 30vw;
+	background-color: rgb(20, 20, 20);
+}
+
+.user * {
+    direction: ltr;
+    border-radius: 1vw;
+}
+
+.user .profile-picture {
+	position: relative;
+	top: 1%;
+	left: 1%;
+	height: 10vw;
+	width: 10vw;
+	border-radius: 50%;
+	background-color: red;
+}
+
+.user .description {
+	position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    font-weight: bold;
+	top: 1%;
+	left: 2%;
+	background-color: transparent;
+    color: white;
+	height: 10vw;
+	width: calc(100% - calc(10vw + 3%));
+}
+
+.level {
+    border-radius: 5vw;
+    margin: 5%;
+    font-size: 1.5vw;
+    padding: 1%;
+    padding-right: 2vw;
+    padding-left: 2vw;
+}
+
+.red  {
+    background-color: black;
+    color: red;
+    box-shadow: 0 0 3px 3px red;
+}
+.red:hover  {
+    color: black;
+    background-color: red;
+    box-shadow: 0 0 3px 3px red;
+}
+
+.purple {
+    background-color: black;
+    color: purple;
+    box-shadow: 0 0 3px 3px purple;
+}
+.purple:hover {
+    color: black;
+    background-color: purple;
+    box-shadow: 0 0 3px 3px purple;
+}
+
+.orange {
+    
+    background-color: black;
+    color: orange;
+    box-shadow: 0 0 3px 3px orange;
+}
+.orange:hover {
+    
+    color: black;
+    background-color: orange;
+    box-shadow: 0 0 3px 3px orange;
+}
+
+.green {
+    background-color: black;
+    color: rgb(0, 255, 0);
+    box-shadow: 0 0 3px 3px rgb(0, 255, 0);
+}
+.green:hover {
+    color: black;
+    background-color: rgb(0, 255, 0);
+    box-shadow: 0 0 3px 3px rgb(0, 255, 0);
+}
+
+.yellow {
+    background-color: black;
+    color: yellow;
+    box-shadow: 0 0 3px 3px yellow;
+}
+.yellow:hover {
+    color: black;
+    background-color: yellow;
+    box-shadow: 0 0 3px 3px yellow;
+}
+
+.user .status {
+	position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	bottom: 0;
+	left: 1%;
+	width: 98%;
+	height: calc(100% - 8% - 10vw);
+	color: white;
+	background-color: rgba(30, 37, 30, 0.671);
+    box-shadow: 0 0 5px 1px red;
+}
+
+.user .status-box {
+    display: block;
+    text-align: center;
+    margin-top: 3%;
+    border: none;
+    width: calc(100% / 3);
+}
+
+.user .status .status-in {
+    margin: 1%;
+    font-size: 2vw;
+}
+
+.ar-font {
+    font-family: sans-serif;
+}
+
+.en-font {
+    font-family: monospace;
+}

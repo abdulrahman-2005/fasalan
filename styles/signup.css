@@ -1,0 +1,157 @@
+@font-face {
+    font-family: kufi;
+    src: url(kufi.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: kufi;
+}
+
+
+.signupContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.area {
+    overflow: hidden;
+    background-color: black;
+    height: 2000px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-flow: column;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 9vw;
+}
+
+.triangle {
+    height: 0px;
+    width: 0px;
+    background-color: #fff;
+    border: 5vw solid black;
+    border-top: 10vw solid yellow;
+    margin: 0;
+}
+
+input{
+    width: 79%;
+    direction: rtl;
+    font-size: xx-large;
+    height: 8%;
+    margin: 2vw;
+    border: none;
+    outline: none;
+    padding-right: 1%;
+}
+#generate {
+    width: 79%;
+    background-color: #fff;
+    font-size: xx-large;
+    height: 8%;
+    margin: 2vw;
+    border: none;
+    
+}
+
+#generate * {
+    font-family: monospace;
+}
+
+#generate span {
+    font-weight: bold;
+}
+
+
+#generate button {
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 20%;
+    border: none;
+    outline: none;
+    font-size: small;
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 1%;
+    font-family: kufi;
+}
+
+.levelChoose {
+    width: 80%;
+    text-align: center;
+    height: 8%;
+    margin: 0;
+    display: flex;
+
+}
+
+.levelChoose button {
+    height: 100%;
+    width: calc(100% / 5);
+    border: none;
+    font-size: 2vw;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.levelChoose button:hover {
+    font-weight: bold;
+}
+
+
+#cardContainer {
+    direction: ltr;
+    width: 100%;
+    height: 300px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+
+.user {
+    height: 100%;
+    width: 80%;
+}
+
+#signup {
+    height: 10%;
+    width: 60%;
+    margin-bottom: 100px;
+    border: none;
+    background-color: black;
+    border: 5px solid white;
+    color: white;
+    font-size: 300%;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#signup:hover {
+    background-color: white;
+    color: black
+}
