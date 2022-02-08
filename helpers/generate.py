@@ -49,17 +49,7 @@ def create_username(name, id):
     elif len(name) < 10:
         while len(name) < 10:
             name += ascii_letters[randint(0, 25)]
-    users[f"U-{''.join(str(id).split())}"] = {
-        "id": id,
-		"level": choice(levels),
-		"name": arname,
-		"usrnm": name,
-        "password": f"{name}{''.join([str(randint(1, 9)) for i in range(5)])}",
-		"tagsCount": "__",
-		"soldTags": "__",
-		"boughtTags": "__",
-    }
-
+    users[f"U-{''.join(str(id).split())}"] = f"I{id}.L{choice(levels)}.A{arname}.U{name}.P5555.TC00.ST00.T00"
 
 levels = [
     "دحيح",

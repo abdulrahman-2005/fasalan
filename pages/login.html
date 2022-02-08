@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>تسجيل الدخول | فصلان شوب</title>
-		<link rel="stylesheet" href="../styles/index.css" />
-		<link rel="stylesheet" href="../styles/login.css" />
-		<script src="../data/users.js"></script>
-		<script src="../js/login.js"></script>
-	</head>
-	<body>
-		<div class="container">
-			<div class="login-box">
-				<h1>تسجيل الدخول الى فصلان</h1>
-				<input type="text" id="fmail" placeholder="الايميل يا حمؤش" />
-				<input
-					type="password"
-					id="password"
-					placeholder="الرقم السري"
-				/>
-				<button id="login-btn">دخول</button>
-				<button onclick="GOTO('./signup.html')">لا تمتلك حسابا</button>
-			</div>
-		</div>
-		<div id="navContainer">
-			<a href="" id="nav"></a>
-		</div>
-		<script>
-			let usrnameinput = document.getElementById("fmail");
-			let usrpasswordinput = document.getElementById("password");
-			let logButton = document.getElementById("login-btn");
 
-			usrpasswordinput.addEventListener("input", () => {
-				if (login(usrnameinput.value, usrpasswordinput.value)) {
-					logButton.style.backgroundColor = "green";
-					logButton.style.color = "black";
-					logButton.onclick = () => {goTo("../index.html")};
-				} else {
-					logButton.style.backgroundColor = "red";
-					logButton.style.color = "black";
-				}
-			});
-		</script>
-	</body>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>تسجيل الدخول | فصلان شوب</title>
+	<link rel="stylesheet" href="../styles/index.css" />
+	<link rel="stylesheet" href="../styles/login.css" />
+	<script src="../data/users.js"></script>
+	<script src="../js/login.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="login-box">
+			<h1>تسجيل الدخول الى فصلان</h1>
+			<input type="text" id="fmail" placeholder="الايميل يا حمؤش" />
+			<input type="password" id="password" placeholder="الرقم السري" />
+			<button id="login-btn">دخول</button>
+			<button onclick="GOTO('./signup.html')">لا تمتلك حسابا</button>
+		</div>
+	</div>
+	<div id="navContainer">
+		<a href="" id="nav"></a>
+	</div>
+	<script>
+		let usrnameinput = document.getElementById("fmail");
+		let usrpasswordinput = document.getElementById("password");
+		let logButton = document.getElementById("login-btn");
+
+		usrpasswordinput.addEventListener("input", () => {
+			if (login(usrnameinput.value, usrpasswordinput.value)) {
+				logButton.style.backgroundColor = "green";
+				logButton.style.color = "black";
+				logButton.onclick = () => { goTo("../index.html") };
+			} else {
+				logButton.style.backgroundColor = "red";
+				logButton.style.color = "black";
+			}
+		});
+	</script>
+</body>
+
 </html>

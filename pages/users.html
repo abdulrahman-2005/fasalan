@@ -1,60 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<link rel="stylesheet" href="../styles/index.css" />
-		<link rel="stylesheet" href="../styles/card.css" />
-		<link rel="stylesheet" href="../styles/user-list.css" />
-		<script src="../data/users.js"></script>
-		<script src="../js/generator.js"></script>
-		<script src="../js/login.js"></script>
-	</head>
 
-	<body>
-		<div class="header">
-			<button
-				onclick='sortUsers(locationId="users-table", users, "level", "دحيح", "../assets/images/project_images/empty-image.png")'
-			>
-				دحيح
-			</button>
-			<button
-				onclick='sortUsers(locationId="users-table", users, "level", "****", "../assets/images/project_images/empty-image.png")'
-			>
-				****
-			</button>
-			<button
-				onclick='sortUsers(locationId="users-table", users, "level", "صايع", "../assets/images/project_images/empty-image.png")'
-			>
-				صايع</button
-			><button
-				onclick='sortUsers(locationId="users-table", users, "level", "هه", "../assets/images/project_images/empty-image.png")'
-			>
-				هه
-			</button>
-			<button
-				onclick='sortUsers(locationId="users-table", users, "level", "نرم", "../assets/images/project_images/empty-image.png")'
-			>
-				نرم
-			</button>
-		</div>
-		<div id="container">
-			<div id="users-table"></div>
-		</div>
-		<script>
-			if (isLogged()) {
-				renderUsers(
-					(locationId = "users-table"),
-					users,
-					"../assets/images/project_images/empty-image.png"
-				);
-			} else {
-				document.body.innerHTML = `<div id="instant">
-	<a href="./login.html"><button>!!!سجل الدخول اولا!!!</button></a>
-</div>`;
-			}
-		</script>
-	</body>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<link rel="stylesheet" href="../styles/index.css" />
+	<link rel="stylesheet" href="../styles/card.css" />
+	<link rel="stylesheet" href="../styles/user-list.css" />
+
+</head>
+
+<body>
+	<div class="header">
+		<button
+			onclick='sortUsers("users-table", users, "level", "دحيح", "../assets/images/project_images/empty-image.png")'>
+			دحيح
+		</button>
+		<button
+			onclick='sortUsers("users-table", users, "level", "****", "../assets/images/project_images/empty-image.png")'>
+			****
+		</button>
+		<button
+			onclick='sortUsers("users-table", users, "level", "صايع", "../assets/images/project_images/empty-image.png")'>
+			صايع</button><button
+			onclick='sortUsers("users-table", users, "level", "هه", "../assets/images/project_images/empty-image.png")'>
+			هه
+		</button>
+		<button
+			onclick='sortUsers("users-table", users, "level", "نرم", "../assets/images/project_images/empty-image.png")'>
+			نرم
+		</button>
+	</div>
+	<div id="container">
+		<div id="users-table"></div>
+	</div>
+	<script src="../data/users.js"></script>
+	<script src="../js/generator.js"></script>
+	<script src="../js/login.js"></script>
+	<script>
+		if (isLogged()) {
+			renderUsers(
+				(locationId = "users-table"),
+				users,
+				"../assets/images/project_images/empty-image.png"
+			);
+		}
+	</script>
+</body>
+
 </html>

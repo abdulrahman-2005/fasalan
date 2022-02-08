@@ -15,7 +15,8 @@ function renderUsers(locationId, userList, imgPath) {
 	let container = document.getElementById(locationId);
 
 	for (i in userList) {
-		level = userList[i]["level"];
+		userLoad = userData(userList[i]);
+		level = userLoad["level"];
 		if (level === levels["1"]) {
 			color = "red";
 		} else if (level === levels["2"]) {
@@ -29,10 +30,10 @@ function renderUsers(locationId, userList, imgPath) {
 		} else {
 			color = "white";
 		}
-		userName = userList[i]["name"];
-		tagsCount = userList[i]["tagsCount"];
-		soldTags = userList[i]["soldTags"];
-		boughtTags = userList[i]["boughtTags"];
+		userName = userLoad["name"];
+		tagsCount = userLoad["tagsCount"];
+		soldTags = userLoad["soldTags"];
+		boughtTags = userLoad["boughtTags"];
 
 		let userBox = `
 <div class="user" style="box-shadow: 0px 0px 4px 4px ${color}">
@@ -64,8 +65,10 @@ function renderUsers(locationId, userList, imgPath) {
 function sortUsers(locationId, userList, condition, value, imgPath) {
 	let container = document.getElementById(locationId);
 	container.innerHTML = "";
+	let userLoadList = [];
 	for (i in userList) {
-		if (userList[i][condition].includes(value)) {
+		userLoad = userData(userList[i]);
+		if (userLoad[condition] === value) {
 			renderUsers(locationId, [userList[i]], imgPath);
 		}
 	}

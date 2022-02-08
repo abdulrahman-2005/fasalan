@@ -135,19 +135,15 @@ body {
     justify-content: center;
     align-items: center;
     font-size: 4vw;
-    border-radius: 10px;
-    transition: .5s;
     font-weight: bold;
     color: white;
-    box-shadow: 5px 5px 0px 0 white;
     background-color: black;
 
 }
 
 .box:hover {
     color: yellow;
-    box-shadow: 5px 5px 0px 0 yellow;
-
+    border: 2px solid yellow;
 }
 
 

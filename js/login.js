@@ -24,21 +24,22 @@ function login(FMailInput, pswdInput) {
 		if (broke) {
 			break;
 		}
+		let userLoad = userData(users[i])
 		if (
-			FMailInput.split("@")[0] === `${users[i]["usrnm"]}` &&
-			users[i]["password"] === pswdInput
+			FMailInput.split("@")[0] === `${userLoad["usrnm"]}` &&
+			userLoad["password"] === pswdInput
 		) {
 			localStorage.setItem("CurrentUser", [
 				true,
-				users[i]["id"],
-				users[i]["level"],
-				users[i]["name"],
-				users[i]["usrnm"],
-				users[i]["FMail"],
-				users[i]["password"],
-				users[i]["tagsCount"],
-				users[i]["soldTags"],
-				users[i]["boughtTags"],
+				userLoad["id"],
+				userLoad["level"],
+				userLoad["name"],
+				userLoad["usrnm"],
+				userLoad["FMail"],
+				userLoad["password"],
+				userLoad["tagsCount"],
+				userLoad["soldTags"],
+				userLoad["boughtTags"],
 			]);
 			return true;
 		} else {
