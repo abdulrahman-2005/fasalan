@@ -164,7 +164,7 @@ function decryptitinsomereallybadway(command) {
 		try {
 			data += binary[i];
 		} catch (error) {
-			console.log("error");
+			console.error("error");
 		}
 	}
 	return data;

@@ -11,7 +11,11 @@ const levels = {
 	4: "هه",
 	5: "نرم",
 };
-function renderUsers(locationId, userList, imgPath) {
+function renderUsers(
+	locationId,
+	userList,
+	imgPath = "../assets/images/project_images/empty-image.png"
+) {
 	let container = document.getElementById(locationId);
 
 	for (i in userList) {
@@ -62,16 +66,23 @@ function renderUsers(locationId, userList, imgPath) {
 	}
 }
 
-function sortUsers(locationId, userList, condition, value, imgPath) {
+function sortUsers(
+	locationId,
+	userList,
+	condition,
+	value,
+	imgPath = "../assets/images/project_images/empty-image.png"
+) {
 	let container = document.getElementById(locationId);
 	container.innerHTML = "";
-	let userLoadList = [];
-	for (i in userList) {
+	let foundUsers = [];
+	for (let i = 0; i < userList.length; i++) {
 		userLoad = userData(userList[i]);
-		if (userLoad[condition] === value) {
-			renderUsers(locationId, [userList[i]], imgPath);
+		if (userLoad[condition].includes(value)) {
+			foundUsers.push(userList[i]);
 		}
 	}
+	renderUsers(locationId, foundUsers, imgPath);
 	if (container.innerHTML === "") {
 		renderUsers(locationId, userList, imgPath);
 	}

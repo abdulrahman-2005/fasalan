@@ -9,28 +9,24 @@
 	<link rel="stylesheet" href="../styles/index.css" />
 	<link rel="stylesheet" href="../styles/card.css" />
 	<link rel="stylesheet" href="../styles/user-list.css" />
-
 </head>
 
 <body>
 	<div class="header">
-		<button
-			onclick='sortUsers("users-table", users, "level", "دحيح", "../assets/images/project_images/empty-image.png")'>
+		<button onclick="sortUsers('users-table', users, 'level', 'دحيح')">
 			دحيح
 		</button>
-		<button
-			onclick='sortUsers("users-table", users, "level", "****", "../assets/images/project_images/empty-image.png")'>
+		<button onclick="sortUsers('users-table', users, 'level', '****')">
 			****
 		</button>
-		<button
-			onclick='sortUsers("users-table", users, "level", "صايع", "../assets/images/project_images/empty-image.png")'>
-			صايع</button><button
-			onclick='sortUsers("users-table", users, "level", "هه", "../assets/images/project_images/empty-image.png")'>
+		<button onclick="sortUsers('users-table', users, 'level', 'نرم')">
+			نرم
+		</button>
+		<button onclick="sortUsers('users-table', users, 'level', 'هه')">
 			هه
 		</button>
-		<button
-			onclick='sortUsers("users-table", users, "level", "نرم", "../assets/images/project_images/empty-image.png")'>
-			نرم
+		<button onclick="sortUsers('users-table', users, 'level', 'صايع')">
+			صايع
 		</button>
 	</div>
 	<div id="container">
@@ -43,9 +39,7 @@
 		if (isLogged()) {
 			renderUsers(
 				(locationId = "users-table"),
-				users,
-				"../assets/images/project_images/empty-image.png"
-			);
+				users);
 		}
 	</script>
 </body>

@@ -44,7 +44,8 @@
 
 .level {
     border-radius: 5vw;
-    margin: 5%;
+    margin-top: 5%;
+    margin-right: 2%;
     font-size: 1.5vw;
     padding: 1%;
     padding-right: 2vw;
@@ -111,12 +112,13 @@
 .user .status {
 	position: relative;
     display: flex;
+    margin-top: 2%;
     justify-content: center;
     align-items: center;
 	bottom: 0;
 	left: 1%;
 	width: 98%;
-	height: calc(100% - 8% - 10vw);
+	height: calc(100% - 10% - 10vw);
 	color: white;
 	background-color: rgba(30, 37, 30, 0.671);
     box-shadow: 0 0 5px 1px red;
