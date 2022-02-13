@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            font-family: Helvetica;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let showing = document.body;
+        function show(textThing) {
+            textThing = textThing.toString()
+            showing.innerHTML = textThing
+        }
+    </script>
+    <script src="./js/test.js"></script>
+</body>
+</html>
